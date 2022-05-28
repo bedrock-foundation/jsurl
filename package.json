@@ -1,7 +1,7 @@
 {
   "name": "@bedrock-foundation/jsurl",
   "description": "URL friendly JSON-like formatting and parsing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "homepage": "http://github.com/bedrock-foundation/jsurl",
   "author": "Sam Hogan",
