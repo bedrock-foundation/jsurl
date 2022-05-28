@@ -1,4 +1,6 @@
-export const stringify = function stringify(v: any) {
+export type JsUrl<T> = string;
+
+export const stringify = function stringify<T>(v: T): JsUrl<T> {
 	function encode(s) {
 		return !/[^\w-.]/.test(s) ? s : s.replace(/[^\w-.]/g, function (ch) {
 			if (ch === '$') return '!';
@@ -54,8 +56,8 @@ var reserved = {
 	"null": null
 };
 
-export const parse = function (s) {
-	if (!s) return s;
+export const parse = function<T> (s: JsUrl<T>): T {
+	if (!s) return null;
 	s = s.replace(/%(25)*27/g, "'");
 	var i = 0,
 		len = s.length;
